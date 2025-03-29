@@ -1,0 +1,46 @@
+*
+{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box
+{
+    flex:1;
+    display: inline;
+}
+
+body
+{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:20px;
+}
+
+.outer_box
+{
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 50px;
+    background-color: white;
+    height: 640px;
+    width: 640px;
+    display: flex;
+    flex-direction: column;
+}
+
+.row
+{
+    display: flex;
+    flex:1;
+}
+
+.fruit
+{
+    background-color: brown;
+}

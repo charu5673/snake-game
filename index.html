@@ -3,11 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Snek</title>
+    <link title="css" rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
 </head>
 <body>
-    <h1>
-        Snake Game
-    </h1>
+    <div class="buttons">
+        <button class="speedUp">Faster</button>
+        <button class="speedDown">Slower</button>
+        <button class="pause">Pause</button>
+        <button class="speed">Constant speed</button>
+        <input type="color" class="color">
+        <label for="rows">Number of rows:</label>
+        <input type="number" id="rows" min="10" max="100">
+        <label for="columns">Number of columns:</label>
+        <input type="number" id="columns" min="10" max="100">
+        <button class="generate">Generate</button>
+        <button class="collison">Collision mode</button>
+        <button class="walls">Blocked walls</button>
+        <button class="reset">Reset</button>
+    </div>
+    <div class="outer_box">
+        <div class="row 0">
+            <div class="box i0 j0"></div>
+            <div class="box i0 j1"></div>
+            <div class="box i0 j2"></div>
+            <div class="box i0 j3"></div>
+            <div class="box i0 j4"></div>
+            <div class="box i0 j5"></div>
+            <div class="box i0 j6"></div>
+            <div class="box i0 j7"></div>
+            <div class="box i0 j8"></div>
+            <div class="box i0 j9"></div>
+        </div>
+        <div class="row 1">
+            <div class="box i1 j0"></div>
+            <div class="box i1 j1"></div>
+            <div class="box i1 j2"></div>
+            <div class="box i1 j3"></div>
+            <div class="box i1 j4"></div>
+            <div class="box i1 j5"></div>
+            <div class="box i1 j6"></div>
+            <div class="box i1 j7"></div>
+            <div class="box i1 j8"></div>
+            <div class="box i1 j9"></div>
+        </div>
+        <div class="row 2">
+            <div class="box i2 j0"></div>
+            <div class="box i2 j1"></div>
+            <div class="box i2 j2"></div>
+            <div class="box i2 j3"></div>
+            <div class="box i2 j4"></div>
+            <div class="box i2 j5"></div>
+            <div class="box i2 j6"></div>
+            <div class="box i2 j7"></div>
+            <div class="box i2 j8"></div>
+            <div class="box i2 j9"></div>
+        </div>
+        <div class="row 3">
+            <div class="box i3 j0"></div>
+            <div class="box i3 j1"></div>
+            <div class="box i3 j2"></div>
+            <div class="box i3 j3"></div>
+            <div class="box i3 j4"></div>
+            <div class="box i3 j5"></div>
+            <div class="box i3 j6"></div>
+            <div class="box i3 j7"></div>
+            <div class="box i3 j8"></div>
+            <div class="box i3 j9"></div>
+        </div>
+        <div class="row 4">
+            <div class="box i4 j0"></div>
+            <div class="box i4 j1"></div>
+            <div class="box i4 j2"></div>
+            <div class="box i4 j3"></div>
+            <div class="box i4 j4"></div>
+            <div class="box i4 j5"></div>
+            <div class="box i4 j6"></div>
+            <div class="box i4 j7"></div>
+            <div class="box i4 j8"></div>
+            <div class="box i4 j9"></div>
+        </div>
+        <div class="row 5">
+            <div class="box i5 j0"></div>
+            <div class="box i5 j1"></div>
+            <div class="box i5 j2"></div>
+            <div class="box i5 j3"></div>
+            <div class="box i5 j4"></div>
+            <div class="box i5 j5"></div>
+            <div class="box i5 j6"></div>
+            <div class="box i5 j7"></div>
+            <div class="box i5 j8"></div>
+            <div class="box i5 j9"></div>
+        </div>
+        <div class="row 6">
+            <div class="box i6 j0"></div>
+            <div class="box i6 j1"></div>
+            <div class="box i6 j2"></div>
+            <div class="box i6 j3"></div>
+            <div class="box i6 j4"></div>
+            <div class="box i6 j5"></div>
+            <div class="box i6 j6"></div>
+            <div class="box i6 j7"></div>
+            <div class="box i6 j8"></div>
+            <div class="box i6 j9"></div>
+        </div>
+        <div class="row 7">
+            <div class="box i7 j0"></div>
+            <div class="box i7 j1"></div>
+            <div class="box i7 j2"></div>
+            <div class="box i7 j3"></div>
+            <div class="box i7 j4"></div>
+            <div class="box i7 j5"></div>
+            <div class="box i7 j6"></div>
+            <div class="box i7 j7"></div>
+            <div class="box i7 j8"></div>
+            <div class="box i7 j9"></div>
+        </div>
+        <div class="row 8">
+            <div class="box i8 j0"></div>
+            <div class="box i8 j1"></div>
+            <div class="box i8 j2"></div>
+            <div class="box i8 j3"></div>
+            <div class="box i8 j4"></div>
+            <div class="box i8 j5"></div>
+            <div class="box i8 j6"></div>
+            <div class="box i8 j7"></div>
+            <div class="box i8 j8"></div>
+            <div class="box i8 j9"></div>
+        </div>
+        <div class="row 9">
+            <div class="box i9 j0"></div>
+            <div class="box i9 j1"></div>
+            <div class="box i9 j2"></div>
+            <div class="box i9 j3"></div>
+            <div class="box i9 j4"></div>
+            <div class="box i9 j5"></div>
+            <div class="box i9 j6"></div>
+            <div class="box i9 j7"></div>
+            <div class="box i9 j8"></div>
+            <div class="box i9 j9"></div>
+        </div>
+    </div>
 </body>
 </html>
